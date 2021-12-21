@@ -13,7 +13,7 @@
         viewBox="0 0 330 330"
         style="enable-background: new 0 0 330 330"
         xml:space="preserve"
-        fill="#fff"
+        fill="#eee"
       >
         <path
           id="XMLID_24_"
@@ -49,7 +49,31 @@
         <img :src="require(`./assets/${data}.jpg`)" />
       </slide>
     </carousel>
-    <section class="contact"></section>
+    <section class="contact container">
+      <header>
+        <p>Wedding planner in Paris<br/> and Bordeaux</p>
+        <div>
+          <img src="" alt="the Perfect Match logo">
+        </div>
+        <h1>Get in <br/>Touch</h1>
+      </header>
+      <main>
+        <section class="main--title">
+          <h1>Get in <br/>Touch</h1>
+        </section>
+        <section class="main--contact">
+          <div>
+            <p>EMAIL</p>
+            <a href="mailto:theperfectmath.contact@gmail.com">theperfectmath.contact@gmail.com</a>
+          </div>
+          <div>
+            <p>Perfect Match Office</p>
+            <a href="tel:0651791508">0651791508</a>
+          </div>
+        </section>
+      </main>
+      <!-- <button data-tf-slider="IhgEUzrB" data-tf-width="550" data-tf-iframe-props="title=Registration Form" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Launch me</button><script src="//embed.typeform.com/next/embed.js" type="application/javascript"></script> -->
+    </section>
   </div>
 </template>
 
@@ -64,7 +88,7 @@ export default {
   },
   data() {
     return {
-      slideContent: 'The perfect match arrive bientôt',
+      slideContent: 'The Perfect Match is coming soon',
     };
   },
   mounted() {
@@ -87,6 +111,12 @@ export default {
   height: 100vh;
   position: relative;
 
+  .container {
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
+
   .content {
     align-items: center;
     display: flex;
@@ -98,8 +128,8 @@ export default {
 
     p {
       font-family: 'Playfair Display', serif;
-      color: #fff;
-      font-size: 2.5rem;
+      color: #eee;
+      font-size: 3rem;
       margin: 0;
       padding: 0;
       opacity: 0.8;
@@ -147,7 +177,83 @@ export default {
   }
 
   .contact {
+    background-color: #161616;
     height: 100vh;
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+
+      p {
+        margin: 0;
+        font-weight: 700;
+        color: hsla(0,0%,100%,.3);
+        text-transform: uppercase;
+        letter-spacing: .01em;
+      }
+
+      div {
+        img {
+          color: #fff;
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      h1 {
+        margin: 0;
+        color: #fff;
+        font-family: 'Playfair Display', serif;
+        font-weight: 300;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding-top: 16px;
+        justify-content: space-between;
+
+        p {
+          font-size: .6rem;
+        }
+
+        h1 {
+          display: block;
+          font-size: 2.6rem;
+          margin-top: 16px;
+          flex: 0 0 100%;
+        }
+      }
+
+      @media screen and (min-width: 577px) {
+        padding-top: 16px;
+
+        p {
+          font-size: .6rem;
+        }
+
+        div {
+          margin: 0 auto;
+        }
+
+        h1 {
+          flex: 0 0 100%;
+          font-size: 2.6rem;
+          margin-top: 16px;
+        }
+      }
+
+      @media screen and (min-width: 700px) {
+        h1 {
+          font-size: 3.6rem;
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        h1 {
+          display: none;
+        }
+      }
+    }
   }
 }
 </style>
