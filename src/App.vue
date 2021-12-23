@@ -70,9 +70,9 @@
             <p>Perfect Match Office</p>
             <a href="tel:0651791508">0651791508</a>
           </div>
+      <button data-tf-slider="IhgEUzrB" data-tf-width="550" data-tf-iframe-props="title=Registration Form" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Launch me</button><script src="//embed.typeform.com/next/embed.js" type="application/javascript"></script>
         </section>
       </main>
-      <!-- <button data-tf-slider="IhgEUzrB" data-tf-width="550" data-tf-iframe-props="title=Registration Form" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#0445AF;color:#FFFFFF;font-size:20px;border-radius:25px;padding:0 33px;font-weight:bold;height:50px;cursor:pointer;line-height:50px;text-align:center;margin:0;text-decoration:none;">Launch me</button><script src="//embed.typeform.com/next/embed.js" type="application/javascript"></script> -->
     </section>
   </div>
 </template>
@@ -179,6 +179,9 @@ export default {
   .contact {
     background-color: #161616;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     header {
       display: flex;
@@ -218,7 +221,7 @@ export default {
 
         h1 {
           display: block;
-          font-size: 2.6rem;
+          font-size: 4.6rem;
           margin-top: 16px;
           flex: 0 0 100%;
         }
@@ -237,20 +240,131 @@ export default {
 
         h1 {
           flex: 0 0 100%;
-          font-size: 2.6rem;
+          font-size: 4.6rem;
           margin-top: 16px;
         }
       }
 
       @media screen and (min-width: 700px) {
         h1 {
-          font-size: 3.6rem;
+          font-size: 5.6rem;
         }
       }
 
       @media screen and (min-width: 800px) {
         h1 {
           display: none;
+        }
+      }
+    }
+
+    main {
+      display: flex;
+
+      .main--contact {
+        width: 100%;
+
+        div {
+          margin-bottom: 25px;
+
+          p {
+            color: hsla(0,0%,100%,.3);
+            font-weight: 700;
+            margin-bottom: .9rem;
+            margin: 0;
+            text-transform: uppercase;
+          }
+
+          a {
+            font-weight: 700;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+          }
+        }
+      }
+
+      .main--title {
+        button {
+          height: 4.58333vw;
+          width: 4.58333vw;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        .main--title {
+          h1 {
+            display: none;
+          }
+        }
+        .main--contact {
+          text-align: center;
+
+          div {
+            p {
+              font-size: 14px;
+              margin-bottom: 8px;
+            }
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: 577px) {
+        .main--title {
+          h1 {
+            display: none;
+          }
+        }
+
+        .main--contact {
+          text-align: center;
+
+          div {
+            p {
+              font-size: 14px;
+              margin-bottom: 8px;
+            }
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      @media screen and (min-width: 800px) {
+        display: flex;
+
+        .main--title {
+          h1 {
+            color: #fff;
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 9.5rem;
+            margin: 0;
+            letter-spacing: -.03em;
+          }
+        }
+
+        .main--contact {
+          text-align: left;
+          margin-top: 80px;
+          margin-left: 32px;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        .main--title {
+          h1 {
+            font-size: 13.6rem;
+          }
+        }
+
+        .main--contact {
+          margin-top: 80px;
+          margin-left: 80px;
         }
       }
     }
