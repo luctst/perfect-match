@@ -199,6 +199,7 @@ export default {
         img {
           color: #fff;
           max-height: 100%;
+          height: auto;
           max-width: 100%;
           object-fit: contain;
         }
