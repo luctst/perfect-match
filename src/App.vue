@@ -157,8 +157,18 @@ export default {
 
     h1 {
       color: #877964;
-      font-size: 3em;
       font-family: "Playfair Display", serif;
+
+      @media (max-width: 576px) {
+        font-size: 2em;
+      }
+      @media (min-width: 577px) {
+        font-size: 2em;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 3em;
+      }
     }
   }
 
@@ -178,12 +188,21 @@ export default {
         p {
           font-family: "Playfair Display", serif;
           color: #fff;
-          font-size: 3rem;
           margin: 0;
           padding: 0;
           opacity: 0.8;
           margin: auto 0;
           text-align: center;
+
+          @media (max-width: 576px) {
+            font-size: 2em;
+          }
+          @media (min-width: 577px) {
+            font-size: 2em;
+          }
+          @media (min-width: 700px) {
+            font-size: 3em;
+          }
         }
 
         svg {
@@ -238,6 +257,18 @@ export default {
         flex-direction: column;
         justify-content: space-between;
 
+        @media (max-width: 576px) {
+          height: 87vh;
+        }
+
+        @media (min-width: 577px) {
+          height: 87vh;
+        }
+
+        @media (min-width: 700px) {
+          height: 100vh;
+        }
+
         header {
           display: flex;
           flex-wrap: wrap;
@@ -267,7 +298,6 @@ export default {
 
           @media screen and (max-width: 576px) {
             padding-top: 16px;
-            justify-content: space-between;
 
             p {
               font-size: 1.6rem;
@@ -300,6 +330,8 @@ export default {
           }
 
           @media screen and (min-width: 700px) {
+            height: 100vh;
+
             h1 {
               font-size: 5.6rem;
             }
@@ -383,6 +415,10 @@ export default {
                   font-size: 14px;
                 }
               }
+
+              button {
+                margin: 0 auto!important;
+              }
             }
           }
 
@@ -405,6 +441,10 @@ export default {
                   font-size: 14px;
                 }
               }
+
+              button {
+                margin: 0 auto!important;
+              }
             }
           }
 
@@ -425,6 +465,10 @@ export default {
             .main--contact {
               text-align: left;
               margin-top: 80px;
+
+              button {
+                margin: 0!important;
+              }
             }
           }
 
