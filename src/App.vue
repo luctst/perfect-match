@@ -43,6 +43,7 @@
       <section class="dark--layout"></section>
       <carousel
         ref="carousel"
+        :loop="true"
         :autoplay="true"
         :perPage="1"
         :autoplayTimeout="3000"
@@ -55,15 +56,12 @@
       </carousel>
       <section class="contact container">
         <header>
-          <p>
-            Event Planner
-            <span>Paris - Bordeaux</span>
-          </p>
-          <h1>Get in <br />Touch</h1>
+          <p v-html="$t('footerHeader')"></p>
+          <h1 v-html="$t('footerContent')"></h1>
         </header>
         <main>
           <section class="main--title">
-            <h1>Get in <br />Touch</h1>
+            <h1 v-html="$t('footerContent')"></h1>
           </section>
           <section class="main--contact">
             <div class="main--contact--wrapper">
@@ -98,7 +96,7 @@ export default {
   },
   data() {
     return {
-      slideContent: 'The Perfect Match is coming soon',
+      slideContent: this.$t('carouselTitle'),
       showLoader: true,
     };
   },
