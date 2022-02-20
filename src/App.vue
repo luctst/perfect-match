@@ -61,21 +61,23 @@
         </header>
         <main>
           <section class="main--title">
-            <h1 v-html="$t('footerContent')"></h1>
+            <h1
+            v-html="$t('footerContent')"
+            :class="[$i18n.locale === 'fr' && 'h1--french']"></h1>
           </section>
           <section class="main--contact">
             <div class="main--contact--wrapper">
               <div>
                 <p>EMAIL</p>
                 <a href="mailto:theperfectmath.contact@gmail.com"
-                  >theperfectmath.contact@gmail.com</a
+                  >theperfectmatch.contact@gmail.com</a
                 >
               </div>
               <div>
-                <p>Perfect Match Office</p>
+                <p>{{ $t('contactPhone') }}</p>
                 <a href="tel:0651791508">06 51 79 15 08</a>
               </div>
-              <button data-tf-slider="FvhRquyK" data-tf-width="550" data-tf-iframe-props="title=Wedding RSVP (copy)" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#877964;color:#FFFFFF;font-size:17px;border-radius:7px;padding:0 28px;font-weight:bold;height:42.5px;cursor:pointer;line-height:42.5px;text-align:center;margin:0;text-decoration:none;">Tell me more </button><script src="//embed.typeform.com/next/embed.js" type="application/javascript"></script>
+              <button data-tf-slider="FvhRquyK" data-tf-width="550" data-tf-iframe-props="title=Wedding RSVP (copy)" data-tf-medium="snippet" style="all:unset;font-family:Helvetica,Arial,sans-serif;display:inline-block;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background-color:#877964;color:#FFFFFF;font-size:17px;border-radius:7px;padding:0 28px;font-weight:bold;height:42.5px;cursor:pointer;line-height:42.5px;text-align:center;margin:0;text-decoration:none;">{{ $t('btnForm') }}</button><script src="//embed.typeform.com/next/embed.js" type="application/javascript"></script>
             </div>
             <script src="//embed.typeform.com/next/embed.js" type="application/javascript"></script>
           </section>
@@ -363,9 +365,9 @@ export default {
               display: flex;
               flex-direction: column;
 
-              button {
-                width: 50%!important;
-              }
+              // button {
+              //   width: 50%!important;
+              // }
             }
 
             div {
@@ -388,6 +390,10 @@ export default {
 
           .main--title {
             color: #877964;
+
+            .h1--french {
+              font-size: 9.5rem;
+            }
 
             button {
               height: 4.58333vw;
